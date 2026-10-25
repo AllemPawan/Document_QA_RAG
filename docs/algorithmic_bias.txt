@@ -1,0 +1,10 @@
+Algorithmic Bias and Fairness in Deployed AI Systems
+
+1. Sources of bias
+Machine learning models learn patterns from historical data. When that data reflects past discrimination, the model reproduces it. Hiring tools trained on résumés of previously hired employees have downgraded candidates from underrepresented groups. Facial recognition systems have shown markedly higher error rates for darker-skinned women than for lighter-skinned men, largely because training sets under-sampled those groups. Bias can also enter through proxy variables: a postal code can stand in for race or income even when those attributes are removed.
+
+2. Measuring fairness
+There is no single definition of fairness. Demographic parity requires equal positive-outcome rates across groups; equalized odds requires equal error rates; calibration requires that predicted scores mean the same thing for every group. These criteria are mathematically incompatible in most real settings, so organizations must decide which trade-off is appropriate for the context and document that decision.
+
+3. Mitigation
+Mitigation can occur before training (rebalancing or auditing data), during training (fairness constraints), or after training (threshold adjustment). Independent audits, diverse development teams, and ongoing monitoring after deployment are recommended because bias can emerge as populations drift over time.

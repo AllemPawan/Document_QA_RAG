@@ -1,0 +1,95 @@
+﻿Ingested 1084 chunks; store holds 1084.
+
+Q: What are the main ethical concerns in AI deployment?
+A: The context doesn't give a complete list, but it points to several ethical concerns in AI deployment:
+
+- **Bias versus privacy:** Making AI fairer may call for larger, more diverse datasets, which conflicts with giving individuals control over their data and protecting their privacy and autonomy [1].
+- **Harm avoidance versus risk-benefit balancing:** Requiring that harm be avoided at all costs can conflict with weighing risks against benefits [1].
+- **Whose well-being counts:** Risk-benefit evaluations can yield different results depending on whose well-being is optimized, and by which actors [1].
+- **Safety under competitive pressure:** Developers who move cautiously may be outpaced by less careful competitors. Safety measures may then get less emphasis than capabilities, which could lead to highly powerful AI being developed before it is understood how to make it safe [3].
+- **Unclear definitions and implementation:** There is debate about what "ethical AI" means and which requirements, technical standards, and best practices are needed. Guidelines also diverge within and between sources, and it remains uncertain how ethical principles should be implemented [2][4].
+Sources: catastrophic_ai_risks_overview.pdf (p.19), global_landscape_ai_ethics_guidelines.pdf (p.1), global_landscape_ai_ethics_guidelines.pdf (p.16)
+
+Q: How can bias enter a machine learning model?
+A: Based on the provided context, bias can enter a machine learning model in several ways:
+
+1. **Through training data:** Most AI systems are data driven, so if the training data contains biases, algorithms trained on it learn those biases and reflect them in their predictions. Algorithms can even amplify and perpetuate existing biases in the data [1].
+
+2. **Through algorithm design:** Algorithms can display biased behavior due to certain design choices, even when the data itself is not biased [1][2].
+
+3. **Through the data-algorithm-user feedback loop:** Biased algorithmic outcomes can affect user experience, creating a feedback loop between data, algorithms, and users that can perpetuate and even amplify existing bias [2]. Figure 1 of the survey places bias types such as behavioral bias, content production bias, ranking bias, emergent bias, aggregation bias, and longitudinal data fallacy within this loop [4].
+
+4. **Through measurement choices:** Measurement (reporting) bias arises from how features are chosen, utilized, and measured [3].
+Sources: survey_bias_fairness_ml.pdf (p.2), survey_bias_fairness_ml.pdf (p.3), survey_bias_fairness_ml.pdf (p.4)
+
+Q: Why are fairness definitions hard to satisfy at the same time?
+A: Fairness definitions are hard to satisfy simultaneously for two main reasons:
+
+1. **Some definitions are mathematically incompatible.** The survey notes that calibration and balancing the positive and negative classes cannot both be satisfied at once, except under certain constraints [1].
+
+2. **There is no single agreed-upon definition of fairness.** Different cultures and outlooks prefer different views, so no one definition is acceptable to everyone [2]. The definitions were also developed for different use cases and differ in how they view fairness, which makes it hard to see how one solution would perform under another definition [4].
+
+Because of this, the survey advises choosing fairness definitions according to the context and application in which they will be used [1].
+Sources: survey_bias_fairness_ml.pdf (p.11), survey_bias_fairness_ml.pdf (p.13), survey_bias_fairness_ml.pdf (p.24)
+
+Q: What privacy risks do large language models pose?
+A: Large language models can memorize and regurgitate fragments of training data, including names and contact details [2]. Their training data often contains personal information scraped or inferred without meaningful consent [2]. In addition, supposedly anonymized datasets can often be linked back to individuals through re-identification attacks [2].
+Sources: privacy_surveillance.docx
+
+Q: What does the GDPR give individuals with respect to automated decisions?
+A: The GDPR restricts solely automated decisions that have significant effects on people [2]. It also grants individuals rights of access, correction, and erasure [2]. The context doesn't say more specifically what those restrictions or rights involve.
+Sources: privacy_surveillance.docx
+
+Q: Why is human oversight sometimes ineffective?
+A: Human oversight can be ineffective for several reasons:
+
+- **Reviewers lack time, training, or authority.** Oversight only works if reviewers can override the system, and nominal oversight without those conditions is weak [1].
+- **Automation bias.** People tend to over-trust machine output, which can make oversight meaningless in practice [1]. Opacity of AI systems can make this worse, since it reduces transparency [3].
+- **Scale and speed.** The agent may need to take too many exploratory actions for humans to check them all, or act too quickly for humans to judge them. This is the scalable oversight problem [2].
+- **Human biases.** People involved in designing and deploying AI bring cognitive biases into decisions, and these can carry through the AI lifecycle [3].
+Sources: concrete_problems_ai_safety.pdf (p.15), nist_ai_rmf_1_0.pdf (p.45), transparency_accountability.pdf (p.1)
+
+Q: How can misinformation from generative AI be addressed?
+A: Based on the context, misinformation from generative AI can be addressed through:
+
+- Content provenance standards, such as watermarking and cryptographic signing [1]
+- Platform policies [1]
+- Media literacy education [1]
+Sources: societal_impact.pdf (p.1)
+
+Q: How does the EU AI Act regulate AI systems?
+A: According to the provided context, the EU AI Act classifies systems by risk level, bans unacceptable-risk uses such as social scoring, and imposes strict requirements on high-risk systems [2].
+
+The context does not describe the Act's further details.
+Sources: societal_impact.pdf (p.1)
+
+Q: What are the core functions of the NIST AI Risk Management Framework?
+A: The core functions of the NIST AI Risk Management Framework are GOVERN, MAP, MEASURE, and MANAGE [1][2]. GOVERN applies across all stages of an organization's AI risk management processes, while MAP, MEASURE, and MANAGE can be applied in AI system-specific contexts and at specific stages of the AI lifecycle [1]. Each function is broken down into categories and subcategories [2].
+Sources: nist_ai_rmf_1_0.pdf (p.25), nist_ai_rmf_1_0.pdf (p.8)
+
+Q: What are the concrete research problems for AI safety, such as reward hacking?
+A: The context names five practical research problems related to accident risk [1]. They fall into three categories:
+
+- **Wrong objective function:** avoiding side effects and avoiding reward hacking [1].
+- **Objective function too expensive to evaluate frequently:** scalable supervision [1].
+- **Undesirable behavior during the learning process:** safe exploration and distributional shift [1].
+
+The passage gives only these names and categories, not detailed descriptions of each problem [1].
+Sources: concrete_problems_ai_safety.pdf (p.1)
+
+Q: Which ethical principles appear most often across global AI guidelines?
+A: According to the context, global convergence has emerged around five ethical principles: transparency, justice and fairness, non-maleficence, responsibility, and privacy [1]. The passages do not report how often each principle appears across the corpus, so the frequency ranking itself is not stated.
+Sources: global_landscape_ai_ethics_guidelines.pdf (p.1)
+
+Q: What kinds of bias are described in machine learning systems?
+A: The context describes these kinds of bias in machine learning systems:
+
+- **Measurement bias:** arises from how we choose, utilize, and measure particular features [1].
+- **Behavioral bias, content production bias, ranking bias, emergent bias, aggregation bias, and longitudinal data fallacy:** these are listed as examples of bias definitions in the data, algorithm, and user interaction feedback loop [3]. The context does not define most of them.
+
+The context also notes that biases in training data can be learned and reflected in predictions, and algorithms can amplify them. Algorithms can also be biased because of design choices, even when the data is unbiased [2].
+Sources: survey_bias_fairness_ml.pdf (p.3), survey_bias_fairness_ml.pdf (p.4)
+
+Q: What is the capital of France?
+A: The provided context doesn't say what the capital of France is. It covers AI ethics guidelines by country, including French documents such as the Mission Villani report [1][2][3], but it doesn't address the capital.
+Sources: global_landscape_ai_ethics_guidelines.pdf (p.37), global_landscape_ai_ethics_guidelines.pdf (p.4)
